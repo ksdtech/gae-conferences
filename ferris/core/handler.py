@@ -178,16 +178,29 @@ class Handler(webapp2.RequestHandler, Uri):
         """Called when a new request is received before authorization and dispatching."""
         pass
 
+    def render_unauthorized(self, msg):
+        self.set(message=msg)
+        
+        response = self.render_template('unauth.html')
+        if isinstance(response, unicode):
+            self.response.charset = 'utf8'
+            self.response.unicode_body = response
+        else:
+            self.response.body = response
+        
+        self.response.status = "401 Unauthorized"
+        return self.response
+
     def is_authorized(self):
         if self.prefix == 'admin' and not users.is_current_user_admin():
-            return Response("You must be an administrator.", status="401 Unauthorized")
+            return self.render_unauthorized("You must be an administrator.")
         if 'allowed_auth_domains' in app_config:
             if not users.get_current_user().email().split('@').pop() in app_config['allowed_auth_domains']:
-                return Response("Your domain does not have access to this application.", status="401 Unauthorized")
+                return self.render_unauthorized("Your domain does not have access to this application.")
         try:
             self._delegate_event('is_authorized', handler=self)
         except Exception, e:
-            return Response(str(e), status='401 Unauthorized')
+            return self.render_unauthorized(str(e))
         return True
 
     def before_dispatch(self):
