@@ -1,13 +1,13 @@
 from ferris.core.handler import Handler, route, scaffold
 from ferris.components import oauth
 from google.appengine.ext import blobstore
-from app.models.school import School
+from app.models.teacher import Teacher
 from app.forms import CsvImportForm
 import logging
 # from apiclient.discovery import build
 
 @scaffold
-class Schools(Handler):
+class Teachers(Handler):
     components = [oauth.OAuth]
     prefixes = ['admin']
     oauth_scopes = ['https://www.googleapis.com/auth/userinfo.profile', 
@@ -46,7 +46,7 @@ class Schools(Handler):
         
         if self.request.method != 'GET' and form.validate():
             blob_key = form.file.data
-            School.import_csv(blobstore.BlobReader(blob_key))
+            Teacher.import_csv(blobstore.BlobReader(blob_key))
             blobstore.delete(blob_key)
             return self.redirect(self.uri(action='admin_list'))
 

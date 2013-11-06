@@ -3,11 +3,11 @@ import wtforms
 import logging
 import cgi
 
-class SchoolsImportForm(wtforms.form.Form):
+class CsvImportForm(wtforms.form.Form):
     file = wtforms.fields.FileField('CSV File', validators=[wtforms.validators.required()])
     
     def process(self, formdata=None, obj=None, **kwargs):
-        super(SchoolsImportForm, self).process(formdata, obj, **kwargs)
+        super(CsvImportForm, self).process(formdata, obj, **kwargs)
         if formdata:
             value = formdata.get('file', None)
             if isinstance(value, cgi.FieldStorage) and 'blob-key' in value.type_options:
