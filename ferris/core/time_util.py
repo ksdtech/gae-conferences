@@ -10,3 +10,9 @@ def localize(dt):
     if not dt.tzinfo:
         dt = utc.localize(dt)
     return dt.astimezone(local_tz)
+
+def normalize(dt):
+    return dt.replace(tzinfo=local_tz).astimezone(utc).replace(tzinfo=None)
+
+def parse_in_local_tz(s):
+    return normalize(datetime.strptime(s,'%Y-%m-%d %H:%M:%S'))
