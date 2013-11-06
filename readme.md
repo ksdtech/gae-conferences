@@ -14,6 +14,6 @@ For help and questions:
     
 Ferris code cloned from Bitbucket:
  
-Commit 0197c09e0572495e4038ff9e2d2f5b2f3d22ece0 
-From: Jon Wayne Parrott <jjramone13@gmail.com>
-Date: Sat, 2 Nov 2013 15:35:57 -0400
+    Commit 0197c09e0572495e4038ff9e2d2f5b2f3d22ece0 
+    From: Jon Wayne Parrott <jjramone13@gmail.com>
+    Date: Sat, 2 Nov 2013 15:35:57 -0400
