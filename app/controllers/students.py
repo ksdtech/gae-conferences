@@ -28,6 +28,9 @@ class Students(Controller):
         components = (scaffold.Scaffolding, oauth.OAuth)
         oauth_scopes = ('https://www.googleapis.com/auth/userinfo.profile', 
             'https://www.googleapis.com/auth/userinfo.email')
+
+    class Scaffold:
+        pass
         
     @require_user_credentials
     def view(self, id):
