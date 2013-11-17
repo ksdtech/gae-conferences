@@ -35,5 +35,4 @@ class Teachers(Controller):
         url = blobstore.create_upload_url(
             success_path=self.uri(_pass_all=True, _full=True),
             gs_bucket_name=None)
-        self.context['form'] = form
-        self.context['upload_url'] = url
+        self.context.set(**{ 'form': form, 'upload_url': url })

@@ -1,4 +1,4 @@
-from ferris.core.ndb import BasicModel
+from ferris.core.ndb import util, BasicModel
 from google.appengine.ext import ndb
 from app.models.school import School
 from webapp2_extras.auth import InvalidAuthIdError, InvalidPasswordError
@@ -24,9 +24,7 @@ class Student(BasicModel):
     crypted_password = ndb.StringProperty()
     
     def get_id(self):
-        # the_id = self._key.id()
-        the_id = self._key.urlsafe()
-        return the_id
+        return util.encode_key(self._key)
             
     def set_password(self, raw_password):
         """Sets the password for the current user
