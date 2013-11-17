@@ -6,7 +6,8 @@ from app.models.student import Student
 import logging
 
 class Sessions(Controller):
-    # route '/login' set up in routes.py
+    
+    @route_with('/login')
     def login(self):
         form = LoginForm()
         self.process_form_data(form)
@@ -27,8 +28,7 @@ class Sessions(Controller):
                 
         self.set(form=form)
  
-            
-    # route '/logout' set up in routes.py
+    @route_with('/logout')
     def logout(self):
         get_auth().unset_session()
         self.redirect('/')

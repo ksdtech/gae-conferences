@@ -20,40 +20,36 @@ def require_user_credentials(method, handler, *args, **kwargs):
         handler.redirect(handler.uri('login'))
     return method(handler, *args, **kwargs)    
 
-@scaffold
+
 class Students(Controller):
-    components = [oauth.OAuth]
-    prefixes = ['admin']
-    oauth_scopes = ['https://www.googleapis.com/auth/userinfo.profile', 
-        'https://www.googleapis.com/auth/userinfo.email']
+    class Meta:
+        Model = Student
+        prefixes = ('admin',)
+        components = (scaffold.Scaffolding, oauth.OAuth)
+        oauth_scopes = ('https://www.googleapis.com/auth/userinfo.profile', 
+            'https://www.googleapis.com/auth/userinfo.email')
         
     @require_user_credentials
-    @scaffold
     def view(self, id):
         pass
     
     @oauth.require_admin_credentials
-    @scaffold
     def admin_list(self):
         pass
         
     @oauth.require_admin_credentials
-    @scaffold
     def admin_add(self):
         pass
 
     @oauth.require_admin_credentials
-    @scaffold
     def admin_view(self, id):
         pass
         
     @oauth.require_admin_credentials
-    @scaffold
     def admin_edit(self, id):
         pass
         
     @oauth.require_admin_credentials
-    @scaffold
     def admin_delete(self, id):
         pass
 

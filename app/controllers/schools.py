@@ -6,35 +6,31 @@ from app.forms import CsvImportForm
 import logging
 # from apiclient.discovery import build
 
-@scaffold
 class Schools(Controller):
-    components = [oauth.OAuth]
-    prefixes = ['admin']
-    oauth_scopes = ['https://www.googleapis.com/auth/userinfo.profile', 
-        'https://www.googleapis.com/auth/userinfo.email']
+    class Meta:
+        Model = School
+        prefixes = ('admin',)
+        components = (scaffold.Scaffolding, oauth.OAuth)
+        oauth_scopes = ('https://www.googleapis.com/auth/userinfo.profile', 
+            'https://www.googleapis.com/auth/userinfo.email')
     
     @oauth.require_admin_credentials
-    @scaffold
     def admin_list(self):
         pass
         
     @oauth.require_admin_credentials
-    @scaffold
     def admin_add(self):
         pass
 
     @oauth.require_admin_credentials
-    @scaffold
     def admin_view(self, id):
         pass
         
     @oauth.require_admin_credentials
-    @scaffold
     def admin_edit(self, id):
         pass
         
     @oauth.require_admin_credentials
-    @scaffold
     def admin_delete(self, id):
         pass
 
