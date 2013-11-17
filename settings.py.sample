@@ -22,6 +22,7 @@ defaults['app_config'] = {
         # Logins for students and guardians
         # 'memcache' is the backend used in Ferris Controller base class
         'session_backend': 'memcache',
+        'cookie_name': 'db_user',
         'user_model': 'app.models.student.Student',
         'user_attributes': ['email']
     },

@@ -19,21 +19,21 @@ class Sessions(Controller):
         self.parse_request(container=form)
         
         if self.request.method != 'GET' and form.validate():
-            auth_id = form.email.data
+            email = form.email.data
             password = form.password.data
             try:
-                user_dict = get_auth().get_user_by_password(auth_id, password,
+                db_user = get_auth().get_user_by_password(email, password,
                     remember=True, save_session=True)
 
-                logging.info("Login succeeded for user %s", auth_id)
+                logging.info("Login succeeded for user %s", email)
                 self._flash('Login succeded!', 'success')
                 
                 # user_id is what our model returns in get_id method
-                user_key = user_dict['user_id']
+                user_key = db_user['user_id']
                 return self.redirect(self.uri(controller='students', action='view', key=user_key))
                 
             except (InvalidAuthIdError, InvalidPasswordError) as e:
-                logging.info('Login failed for user %s because of %s', auth_id, type(e))
+                logging.info('Login failed for user %s because of %s', email, type(e))
                 self._flash('Login failed. Check your credentials and try again.', 'error')
                 
         self.context['form'] = form

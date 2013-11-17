@@ -1,0 +1,14 @@
+{% extends "layouts/default.html" %}
+
+{% block layout_content %}
+
+<div class="container">
+  <h3>Parent Teacher Conferences</h3>
+  <p>The current user is {{ferris.format_value(this.auth_user)}}</p>
+  
+  <p><a href="/login">Log in</a><br />
+    <a href="/logout">Log out</a><br />
+    <a href="/teachers/view">Teacher log in</a></p>
+</div>
+
+{% endblock %}
