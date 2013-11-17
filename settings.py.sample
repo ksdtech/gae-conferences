@@ -1,30 +1,57 @@
+from ferris import settings
 
-app_config = {}
+defaults = {}
 
-app_config['timezone'] = 'US/Eastern'
+defaults['timezone'] = {
+    'local': 'US/Pacific'
+}
 
-app_config['email'] = {
+defaults['log_level'] = 'DEBUG'
+
+defaults['email'] = {
     # Configures what address is in the sender field by default.
-    'sender': None
+    'sender': 'webmaster@kentfieldschools.org'
 }
 
-app_config['webapp2_extras.sessions'] = {
-    # WebApp2 encrypted cookie key
-    # You can use a UUID generator like http://www.famkruithof.net/uuid/uuidgen
-    'secret_key': '9a788030-837b-11e1-b0c4-0800200c9a66',
+defaults['app_config'] = {
+    'webapp2_extras.sessions': {
+        # WebApp2 encrypted cookie key
+        # You can use a UUID generator like http://www.famkruithof.net/uuid/uuidgen
+        'secret_key': 'ajeljeejer',
+    },
+
+    'webapp2_extras.auth'] = {
+        # Logins for students and guardians
+        'user_model': 'app.models.student.Student',
+        'user_attributes': ['email']
+    }
 }
 
-app_config['oauth2'] = {
+defaults['oauth2'] = {
     # OAuth2 Configuration should be generated from
     # https://code.google.com/apis/console
-    'client_id': None,  # XXXXXXXXXXXXXXX.apps.googleusercontent.com
-    'client_secret': None
+    # Click "Create another Client ID" and type "web application"
+    'client_id': 'alslsndlasl',
+    'client_secret': 'alahahaere'
 }
+
+defaults['allowed_auth_domains'] = [ 
+    'kentfieldschools.org' 
+]
 
 # This enables the template debugger.
 # It is automatically disabled in the live environment as it may leak sensitive data.
 # Users in the 'required_domain' may view the debugger in the live environment.
-app_config['ed_rooney'] = {
+defaults['ed_rooney'] = {
     'enabled': True,
-    'required_domain': 'cloudsherpas.com'
+    'required_domain': 'kentfieldschools.org'
 }
+
+# Enables or disables app stats.
+# NOTE: This must also be enabled in app.yaml.
+defaults['appstats'] = {
+    'enabled': False,
+    'enabled_live': False
+}
+
+settings.defaults(defaults)

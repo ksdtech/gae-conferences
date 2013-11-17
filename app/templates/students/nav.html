@@ -1,0 +1,6 @@
+{% extends 'scaffolding/nav.html' %}
+
+{% block links %}
+    {{super()}}
+    {{s.nav_link('Import', 'import', 'icon-ok')}}
+{% endblock %}

@@ -1,0 +1,30 @@
+{% import 'scaffolding/macros.html' as s with context %}
+{% import 'macros/form.html' as f with context %}
+{% extends "layouts/default.html" %}
+
+{% block layout_content %}
+
+{% include "elements/ferris/landing_style.html" %}
+
+<div>
+  <h1>Log In</h1>
+
+  {{s.flash()}}
+
+  <form class="form" method="POST">
+  <fieldset>
+    {% block form_fields %}
+        {% for field in form %}
+            {{ f.form_control(field, class='span6') }}
+        {% endfor %}
+    {% endblock %}
+    <div class='controls form-actions'>
+      <div class="btn-group">
+        <button class='btn btn-primary btn-large' type='submit'>Log In</button>
+      </div>
+    </div>
+  </fieldset>
+  </form>
+</div>
+
+{% endblock %}
