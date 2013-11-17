@@ -1,0 +1,8 @@
+{% extends "layouts/error.html" %}
+
+{% block title %}Access Denied{% endblock %}
+{% block subtitle %}Unauthorized request{% endblock %}
+{% block body %}
+<p><a href="{{db_auth.create_login_url('/students/appointments')}}">Student log in</a></p>
+<p><a href="{{ferris.users.create_login_url('/teachers/appointments')}}">Teacher log in</a></p>
+{% endblock %}

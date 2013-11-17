@@ -1,10 +1,13 @@
 from ferris.core.controller import Controller, route
-from webapp2_extras.auth import get_auth
+import db_auth
 import logging
 
 class Home(Controller):
+
+    def _init_meta(self):
+        super(Home, self)._init_meta()
+        db_auth.init_meta(self)
+
     @route
     def index(self):
-        u = get_auth().get_user_by_session()
-        logging.info("user is %s" % u)
-        self.context['user'] = u
+        self.context.set(**{ 'student': self.db_user, 'teacher': self.user })

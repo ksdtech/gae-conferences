@@ -1,7 +1,6 @@
 from ferris.core.controller import Controller, route
 from ferris.core import auth, scaffold
 from ferris.components import oauth
-from webapp2_extras.auth import get_auth
 from google.appengine.ext import blobstore
 from app.models.student import Student
 from app.forms import CsvImportForm
@@ -18,7 +17,7 @@ class Students(Controller):
         oauth_scopes = ('https://www.googleapis.com/auth/userinfo.profile', 
             'https://www.googleapis.com/auth/userinfo.email')
         authorizations = (auth.require_admin_for_prefix(prefix=('admin',)),
-            db_auth.require_db_user)
+            db_auth.require_db_user_for_action(action=('appointments',)))
     
     admin_list   = scaffold.list
     admin_view   = scaffold.view
@@ -28,19 +27,10 @@ class Students(Controller):
 
     def _init_meta(self):
         super(Students, self)._init_meta()
-        db_user = get_auth().get_user_by_session()
-        if db_user and db_user['user_id']:
-            auth_key = self.util.decode_key(db_user['user_id'])
-            self.db_user = auth_key.get()
-        
-    def view(self, key):
-        # we ignore key (or check its validity)
-        auth_key = self.db_user.key
-        qs_key = self.util.decode_key(key)
-        logging.info("Students.view key is %s, qs_key is %s" % (auth_key, qs_key))
-        item = auth_key.get()
-        if not self.db_user:
-            return 404
+        db_auth.init_meta(self)
+
+    @route
+    def appointments(self):
         self.context['student'] = self.db_user
 
     @route

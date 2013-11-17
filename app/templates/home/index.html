@@ -4,11 +4,13 @@
 
 <div class="container">
   <h3>Parent Teacher Conferences</h3>
-  <p>The current user is {{ferris.format_value(this.auth_user)}}</p>
-  
-  <p><a href="/login">Log in</a><br />
-    <a href="/logout">Log out</a><br />
-    <a href="/teachers/view">Teacher log in</a></p>
+  {% if student %}
+  <p>The current user is {{student.email}}</p>
+  <p><a href="/logout">Log out</a></p>
+  {% else %}
+  <p><a href="/students/appointments">Parent log in</a></p>
+  <p><a href="/teachers/appointments">Teacher log in</a></p>
+  {% endif %}
 </div>
 
 {% endblock %}

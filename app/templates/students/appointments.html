@@ -1,0 +1,8 @@
+{% import 'scaffolding/macros.html' as s with context %}
+{% extends s.layout() %}
+
+{% block layout_content %}
+<div class="container">
+  <h3>Appointments for {{student.email}}</h3>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% import 'scaffolding/macros.html' as s with context %}
+{% extends s.layout() %}
+
+{% block layout_content %}
+<div class="container">
+  <h3>Appointments for {{teacher}}</h3>
+  <p><a href="{{logout_url}}">Log out</a></p>
+</div>
+{% endblock %}
