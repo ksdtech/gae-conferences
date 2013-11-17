@@ -15,7 +15,7 @@
   <fieldset>
     {% block form_fields %}
         {% for field in form %}
-            {{ f.form_control(field, class='span6') }}
+            {{ f.form_field(form, field) }}
         {% endfor %}
     {% endblock %}
     <div class='controls form-actions'>

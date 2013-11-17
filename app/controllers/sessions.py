@@ -21,12 +21,12 @@ class Sessions(Controller):
                 
                 # user_id is what our model returns in get_id method
                 url_id = ':' + user_dict['user_id']
-                return self.redirect(self.uri('students-view', id=url_id))
+                return self.redirect(self.uri(controller='students', action='view', id=url_id))
             except (InvalidAuthIdError, InvalidPasswordError) as e:
                 logging.info('Login failed for user %s because of %s', auth_id, type(e))
                 self.flash('Login failed.  Check your credentials and try again.', 'error')
                 
-        self.set(form=form)
+        self.context['form'] = form
  
     @route_with('/logout')
     def logout(self):

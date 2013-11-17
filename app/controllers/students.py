@@ -57,16 +57,16 @@ class Students(Controller):
     @route
     def admin_import(self):
         form = CsvImportForm()
-        self.process_form_data(form)
+        self.parse_request(container=form)
         
         if self.request.method != 'GET' and form.validate():
             blob_key = form.file.data
             Student.import_csv(blobstore.BlobReader(blob_key))
             blobstore.delete(blob_key)
-            return self.redirect(self.uri(action='admin_list'))
+            return self.redirect(self.uri(action='list'))
 
         url = blobstore.create_upload_url(
-            success_path=self.uri(action='admin_import', _pass_all=True, _full=True),
+            success_path=self.uri(_pass_all=True, _full=True),
             gs_bucket_name=None)
-        self.set(form=form)
-        self.set(upload_url=url)
+        self.context['form'] = form
+        self.context['upload_url'] = url
