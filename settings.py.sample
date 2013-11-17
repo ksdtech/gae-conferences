@@ -20,7 +20,7 @@ defaults['app_config'] = {
         'secret_key': 'ajeljeejer',
     },
 
-    'webapp2_extras.auth'] = {
+    'webapp2_extras.auth': {
         # Logins for students and guardians
         'user_model': 'app.models.student.Student',
         'user_attributes': ['email']

@@ -1,4 +1,5 @@
 from ferris.core.controller import Controller, route
+from ferris.core import scaffold
 from ferris.components import oauth
 from google.appengine.ext import blobstore
 from app.models.school import School

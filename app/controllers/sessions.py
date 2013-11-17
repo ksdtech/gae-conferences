@@ -1,4 +1,4 @@
-from ferris.core.controller import Controller, route
+from ferris.core.controller import Controller, route_with
 from google.appengine.ext import ndb
 from webapp2_extras.auth import get_auth, InvalidAuthIdError, InvalidPasswordError
 from app.forms import LoginForm

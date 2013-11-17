@@ -1,7 +1,7 @@
 from ferris.core.controller import Controller, route
+from ferris.core import scaffold
 from ferris.components import oauth
 from webapp2_extras.auth import get_auth
-
 from google.appengine.ext import blobstore
 from app.models.student import Student
 from app.forms import CsvImportForm
