@@ -1,7 +1,7 @@
 from google.appengine.ext import ndb
 from ferris.core import inflector
 from ferris.core.ndb import util as ndb_util
-
+import logging
 
 class Handler(object):
     """
@@ -30,8 +30,14 @@ class Handler(object):
 
         The entity is always at ``inflector.singularize(self.name)``, so 'cat', 'post', etc.
         """
-        item = self.key_from_string(id).get()
+        item = None
+        try:
+            item = self.key_from_string(id).get()
+        except:
+            logging.info("bang")
+            pass
         if item == None:
+            logging.info("returning 404")
             return 404
         self.set(inflector.singularize(self.name), item)
 
@@ -76,7 +82,11 @@ class Handler(object):
 
         If an item is saved, then the ``edited_item`` template variable will be set.
         """
-        item = self.key_from_string(id).get()
+        item = None
+        try:
+            item = self.key_from_string(id).get()
+        except:
+            pass
         if item == None:
             return 404
 
@@ -116,7 +126,11 @@ class Handler(object):
             self.key_from_string(id).delete()
 
         """
-        item = self.key_from_string(id)
+        item = None
+        try:
+            item = self.key_from_string(id).get()
+        except:
+            pass
         if item == None:
             return 404
 
