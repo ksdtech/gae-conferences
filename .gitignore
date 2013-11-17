@@ -1,6 +1,4 @@
 *.pyc
 ds
 *.coverage
-.DS_Store
-settings.py
-client_secret*.json
+*~

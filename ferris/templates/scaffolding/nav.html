@@ -1,23 +1,18 @@
 {% import 'scaffolding/macros.html' as s with context %}
 
-<div class='well' style='padding: 8px 0;'>
-    <ul class="nav nav-list">
-        <li class="nav-header">
-            {% block title %}
-                {{scaffolding.title}}
-            {% endblock %}
-        </li>
+{% if scaffolding %}
 
+<ul class="nav nav-tabs justified">
+    {% set item = context[scaffolding.singularized] %}
 
-        {% set item = context[scaffolding.singularized] %}
+    {% block links %}
         {% if item %}
-            {{s.nav_link('View', 'view', 'icon-search', id=scaffolding.url_id_for(item))}}
-            {{s.nav_link('Edit', 'edit', 'icon-pencil', id=scaffolding.url_id_for(item))}}
+            {{s.nav_link('View', 'view', 'glyphicon-search', id=scaffolding.url_id_for(item))}}
+            {{s.nav_link('Edit', 'edit', 'glyphicon-pencil', id=scaffolding.url_id_for(item))}}
         {% endif %}
+        {{s.nav_link('List', 'list', 'glyphicon-list')}}
+        {{s.nav_link('Add', 'add', 'glyphicon-plus')}}
+    {% endblock %}
+<ul>
 
-        {% block links %}
-            {{s.nav_link('List', 'list', 'icon-list')}}
-            {{s.nav_link('Add', 'add', 'icon-plus')}}
-        {% endblock %}
-    <ul>
-</div>
+{% endif %}
