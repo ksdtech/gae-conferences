@@ -5,9 +5,19 @@ A web app built with the Ferris Framework.
 
 Ferris code cloned from develop branch on Bitbucket:
  
-    Commit 0197c09e0572495e4038ff9e2d2f5b2f3d22ece0 
+    From b4e00ee3745a30bc73568ea09cfdca6aedcffee1 Mon Sep 17 00:00:00 2001
     From: Jon Wayne Parrott <jjramone13@gmail.com>
-    Date: Sat, 2 Nov 2013 15:35:57 -0400
+    Date: Wed, 13 Nov 2013 13:49:40 -0500
+    Subject: [PATCH] decode_key now checks if the parameter is already a key
+
+
+TODO
+----
+
+Having trouble using webapp2\_extras auth module. Perhaps we're 
+saving to a different session store? Log shows:
+
+    WARNING  2013-11-17 09:29:51,441 securecookie.py:77] Invalid cookie signature 
 
 User authentication (for students/guardians) based on this skeleton project:
 

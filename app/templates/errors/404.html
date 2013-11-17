@@ -1,11 +1,8 @@
-{% extends "layouts/errors.html" %}
+{% extends "layouts/error.html" %}
 
-{% block layout_head_title %}404: Not Found{% endblock %}
-
-{% block layout_content %}
-
-{% include "elements/ferris/landing_style.html" %}
-
+{% block title %}Not Found{% endblock %}
+{% block subtitle %}This resouce could not be located{% endblock %}
+{% block body %}
 <h3>This is not the page you are looking for.</h3>
 
 <p>It looks like you were trying to get some information from '{{request.path}}'.</p>

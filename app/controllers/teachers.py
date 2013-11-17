@@ -15,30 +15,12 @@ class Teachers(Controller):
         oauth_scopes = ('https://www.googleapis.com/auth/userinfo.profile', 
             'https://www.googleapis.com/auth/userinfo.email')
  
-    class Scaffold:
-        pass
-    
-    @oauth.require_admin_credentials
-    def admin_list(self):
-        pass
-        
-    @oauth.require_admin_credentials
-    def admin_add(self):
-        pass
+    admin_list   = scaffold.list
+    admin_view   = scaffold.view
+    admin_add    = scaffold.add
+    admin_edit   = scaffold.edit
+    admin_delete = scaffold.delete
 
-    @oauth.require_admin_credentials
-    def admin_view(self, id):
-        pass
-        
-    @oauth.require_admin_credentials
-    def admin_edit(self, id):
-        pass
-        
-    @oauth.require_admin_credentials
-    def admin_delete(self, id):
-        pass
-
-    @oauth.require_admin_credentials
     @route
     def admin_import(self):
         form = CsvImportForm()

@@ -4,14 +4,10 @@
 
 {% block layout_content %}
 
-{% include "elements/ferris/landing_style.html" %}
+<div class="container">
+  <h3>Log In</h3>
 
-<div>
-  <h1>Log In</h1>
-
-  {{s.flash()}}
-
-  <form class="form" method="POST">
+  <form class="form" method="POST" action="{{this.uri(_pass_all=True)}}"  enctype="application/x-www-form-urlencoded" role="form">
   <fieldset>
     {% block form_fields %}
         {% for field in form %}

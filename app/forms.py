@@ -3,11 +3,6 @@ import wtforms
 import logging
 import cgi
 
-class LoginForm(wtforms.form.Form):
-    email = wtforms.fields.StringField('Email address', validators=[wtforms.validators.Email()])
-    password = wtforms.fields.PasswordField('Password', validators=[wtforms.validators.Length(4, 20)])
-
-
 class CsvImportForm(wtforms.form.Form):
     file = wtforms.fields.FileField('CSV File', validators=[wtforms.validators.required()])
     

@@ -6,8 +6,6 @@ defaults['timezone'] = {
     'local': 'US/Pacific'
 }
 
-defaults['log_level'] = 'DEBUG'
-
 defaults['email'] = {
     # Configures what address is in the sender field by default.
     'sender': 'webmaster@kentfieldschools.org'
@@ -17,14 +15,20 @@ defaults['app_config'] = {
     'webapp2_extras.sessions': {
         # WebApp2 encrypted cookie key
         # You can use a UUID generator like http://www.famkruithof.net/uuid/uuidgen
-        'secret_key': 'ajeljeejer',
+        'secret_key': '9a788030-837b-11e1-b0c4-0800200c9a66',
     },
 
     'webapp2_extras.auth': {
         # Logins for students and guardians
         'user_model': 'app.models.student.Student',
         'user_attributes': ['email']
-    }
+    },
+    
+    'allowed_auth_domains': [ 
+        'kentfieldschools.org' 
+    ],
+    
+    'log_level': 'DEBUG'
 }
 
 defaults['oauth2'] = {
@@ -34,10 +38,6 @@ defaults['oauth2'] = {
     'client_id': 'alslsndlasl',
     'client_secret': 'alahahaere'
 }
-
-defaults['allowed_auth_domains'] = [ 
-    'kentfieldschools.org' 
-]
 
 # This enables the template debugger.
 # It is automatically disabled in the live environment as it may leak sensitive data.
