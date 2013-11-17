@@ -15,11 +15,13 @@ defaults['app_config'] = {
     'webapp2_extras.sessions': {
         # WebApp2 encrypted cookie key
         # You can use a UUID generator like http://www.famkruithof.net/uuid/uuidgen
-        'secret_key': '9a788030-837b-11e1-b0c4-0800200c9a66',
+        'secret_key': '9a788030-837b-11e1-b0c4-0800200c9a66'
     },
 
     'webapp2_extras.auth': {
         # Logins for students and guardians
+        # 'memcache' is the backend used in Ferris Controller base class
+        'session_backend': 'memcache',
         'user_model': 'app.models.student.Student',
         'user_attributes': ['email']
     },
