@@ -1,5 +1,6 @@
-from ferris.core.controller import Controller, route_with
 from ferris.components.flash_messages import FlashMessages
+from ferris.core import settings
+from ferris.core.controller import Controller, route_with
 from webapp2_extras.auth import get_auth, InvalidAuthIdError, InvalidPasswordError
 import wtforms
 import logging
@@ -19,8 +20,8 @@ class Sessions(Controller):
         self.parse_request(container=form)
         
         if self.request.method != 'GET' and form.validate():
-            email = form.email.data
-            password = form.password.data
+            email = str(form.email)
+            password = str(form.password)
             try:
                 db_user = get_auth().get_user_by_password(email, password,
                     remember=True, save_session=True)
@@ -28,7 +29,9 @@ class Sessions(Controller):
                 logging.info("Login succeeded for user %s", email)
                 self._flash('Login succeded!', 'success')
                 
-                destination = form.destination.data or self.uri(controller='students', action='appointments')
+                destination = str(form.destination)
+                if not destination:
+                    destination = settings.get('db_login')['login_dest_url']
                 return self.redirect(destination)
                 
             except (InvalidAuthIdError, InvalidPasswordError) as e:
@@ -39,8 +42,11 @@ class Sessions(Controller):
  
     @route_with('/logout', methods=['GET'])
     def logout(self):
-        destination = self.request.params.get('destination', '/home/index')
         get_auth().unset_session()
+        
+        destination = self.request.params.get('destination', None)
+        if not destination:
+            destination = settings.get('db_login')['logout_dest_url']
         return self.redirect(destination)
         
     def _flash(self, message, mtype='info'):

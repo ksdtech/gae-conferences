@@ -34,6 +34,12 @@ defaults['app_config'] = {
     'log_level': 'DEBUG'
 }
 
+# used in Sessions controller
+defaults['db_login'] = {
+    'login_dest_url'  = '/students/appointments',
+    'logout_dest_url' = '/home/index'
+}
+
 defaults['oauth2'] = {
     # OAuth2 Configuration should be generated from
     # https://code.google.com/apis/console
