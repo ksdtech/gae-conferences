@@ -36,8 +36,8 @@ defaults['app_config'] = {
 
 # used in Sessions controller
 defaults['db_login'] = {
-    'login_dest_url'  = '/students/appointments',
-    'logout_dest_url' = '/home/index'
+    'login_dest_url': '/students/appointments',
+    'logout_dest_url': '/home/index'
 }
 
 defaults['oauth2'] = {

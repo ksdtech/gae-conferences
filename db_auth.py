@@ -1,3 +1,4 @@
+from google.appengine.api import users
 from webapp2_extras.auth import get_auth
 from ferris.core.auth import predicate_chain, prefix_predicate, action_predicate, route_predicate
 import urllib
@@ -18,6 +19,12 @@ def init_meta(controller):
         controller.db_user = auth_key.get()
 
 def create_login_url(dest_url=None):
-    return "/login?destination=%s" % urllib.quote(dest_url)
+    return "/login?next=%s" % urllib.quote(dest_url)
+    
+def create_login_for(request):
+    if request.path.startswith('/students'):
+        return (create_login_url(request.url), 'Parent log in')
+    else:
+        return (users.create_login_url(request.url), 'Teacher log in')
 
 require_db_user_for_action = predicate_chain(action_predicate, require_db_user)

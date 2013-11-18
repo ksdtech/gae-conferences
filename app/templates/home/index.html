@@ -8,8 +8,8 @@
   <p>The current user is {{student.email}}</p>
   <p><a href="/logout">Log out</a></p>
   {% else %}
-  <p><a href="/students/appointments">Parent log in</a></p>
-  <p><a href="/teachers/appointments">Teacher log in</a></p>
+  <p><a href="{{ student_login_url }}">Parent log in</a></p>
+  <p><a href="{{ teacher_login_url }}">Teacher log in</a></p>
   {% endif %}
 </div>
 

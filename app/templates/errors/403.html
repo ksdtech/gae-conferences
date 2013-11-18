@@ -1,7 +1,21 @@
-{% extends "layouts/error.html" %}
+<!doctype html>
+<html>
+<head>
+    <title>Unauthorized</title>
 
-{% block title %}Access Denied{% endblock %}
-{% block subtitle %}Unauthorized request{% endblock %}
-{% block body %}
-<p><a href="{{ login_url }}">{{ login_name }}</a></p>
-{% endblock %}
+    <link rel="stylesheet" type="text/css" href="/ferris/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/ferris/css/bootstrap-responsive.min.css">
+    {% include "elements/ferris/landing_style.html" %}
+</head>
+<body>
+<div class="container">
+    <div class="landing">
+        {% block layout_content %}
+          <h3>Access Denied</h3>
+          <h4 class='blue'>Unauthorized request</h4>
+          <p>To access that resource you must be logged in. Click this link:&nbsp;<a href="{{ login_url }}">{{ login_name }}</a></p>
+        {% endblock %}
+    </div>
+</div>
+</body>
+</html>
