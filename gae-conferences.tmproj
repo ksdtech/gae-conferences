@@ -3,13 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>settings.py.sample</string>
+	<string>ferris/core/template.py</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>children</key>
 			<array>
 				<dict>
+					<key>expanded</key>
+					<true/>
 					<key>name</key>
 					<string>app</string>
 					<key>regexFolderFilter</key>
@@ -26,6 +28,8 @@
 				<dict>
 					<key>filename</key>
 					<string>backends.yaml</string>
+					<key>lastUsed</key>
+					<date>2013-11-17T22:21:40Z</date>
 				</dict>
 				<dict>
 					<key>filename</key>
@@ -34,6 +38,8 @@
 					<date>2013-11-17T04:45:22Z</date>
 				</dict>
 				<dict>
+					<key>expanded</key>
+					<true/>
 					<key>name</key>
 					<string>ferris</string>
 					<key>regexFolderFilter</key>
@@ -49,13 +55,13 @@
 					<key>filename</key>
 					<string>main.py</string>
 					<key>lastUsed</key>
-					<date>2013-11-17T04:31:25Z</date>
+					<date>2013-11-17T22:20:11Z</date>
 				</dict>
 				<dict>
 					<key>filename</key>
 					<string>db_auth.py</string>
 					<key>lastUsed</key>
-					<date>2013-11-17T20:51:47Z</date>
+					<date>2013-11-17T23:19:06Z</date>
 				</dict>
 				<dict>
 					<key>filename</key>
@@ -93,15 +99,13 @@
 					<key>filename</key>
 					<string>settings.py</string>
 					<key>lastUsed</key>
-					<date>2013-11-17T20:54:09Z</date>
+					<date>2013-11-17T22:28:21Z</date>
 				</dict>
 				<dict>
 					<key>filename</key>
 					<string>settings.py.sample</string>
 					<key>lastUsed</key>
-					<date>2013-11-17T20:54:09Z</date>
-					<key>selected</key>
-					<true/>
+					<date>2013-11-17T22:16:43Z</date>
 				</dict>
 				<dict>
 					<key>children</key>
@@ -145,89 +149,148 @@
 	<integer>307</integer>
 	<key>metaData</key>
 	<dict>
-		<key>ferris/core/scaffold.py</key>
+		<key>app/controllers/students.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>68</integer>
 				<key>line</key>
-				<integer>174</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>148</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>172</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>174</integer>
-			</dict>
-		</dict>
-		<key>ferris/core/views.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>30</integer>
-				<key>line</key>
-				<integer>26</integer>
+				<integer>19</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>8</integer>
+			<integer>13</integer>
 		</dict>
-		<key>settings.py</key>
+		<key>app/listeners.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>26</integer>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>app/templates/errors/401.html</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>63</integer>
+				<key>line</key>
+				<integer>5</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>app/templates/home/index.html</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>36</integer>
+				<key>line</key>
+				<integer>11</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>app/templates/students/import.html</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>17</integer>
+				<key>line</key>
+				<integer>15</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>ferris/controllers/errors.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
 				<key>line</key>
 				<integer>24</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>8</integer>
+			<integer>0</integer>
 		</dict>
-		<key>settings.py.sample</key>
+		<key>ferris/core/template.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>26</integer>
+				<integer>20</integer>
 				<key>line</key>
-				<integer>24</integer>
+				<integer>170</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>8</integer>
+			<integer>62</integer>
+		</dict>
+		<key>ferris/templates/macros/form.html</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>48</integer>
+				<key>line</key>
+				<integer>26</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>14</integer>
+		</dict>
+		<key>ferris/templates/scaffolding/macros.html</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>58</integer>
+				<key>line</key>
+				<integer>54</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>61</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>settings.py</string>
-		<string>settings.py.sample</string>
-		<string>ferris/core/scaffold.py</string>
-		<string>ferris/core/views.py</string>
+		<string>app/templates/students/import.html</string>
+		<string>ferris/templates/macros/form.html</string>
+		<string>ferris/templates/scaffolding/macros.html</string>
+		<string>ferris/controllers/errors.py</string>
+		<string>ferris/core/template.py</string>
+		<string>app/templates/home/index.html</string>
+		<string>app/controllers/students.py</string>
+		<string>app/templates/errors/401.html</string>
+		<string>app/listeners.py</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{382, 141}, {954, 629}}</string>
+	<string>{{326, 141}, {954, 629}}</string>
 </dict>
 </plist>

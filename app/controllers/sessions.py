@@ -7,7 +7,7 @@ import logging
 class LoginForm(wtforms.form.Form):
     email = wtforms.fields.StringField('Email address', validators=[wtforms.validators.Email()])
     password = wtforms.fields.PasswordField('Password', validators=[wtforms.validators.Length(4, 20)])
-    next_url = wtforms.fields.StringField(widget=wtforms.widgets.HiddenInput())
+    destination = wtforms.fields.StringField(widget=wtforms.widgets.HiddenInput())
 
 class Sessions(Controller):
     class Meta:
@@ -28,8 +28,8 @@ class Sessions(Controller):
                 logging.info("Login succeeded for user %s", email)
                 self._flash('Login succeded!', 'success')
                 
-                next_url = form.next_url.data or self.uri(controller='students', action='appointments')
-                return self.redirect(next_url)
+                destination = form.destination.data or self.uri(controller='students', action='appointments')
+                return self.redirect(destination)
                 
             except (InvalidAuthIdError, InvalidPasswordError) as e:
                 logging.info('Login failed for user %s because of %s', email, type(e))
@@ -39,9 +39,9 @@ class Sessions(Controller):
  
     @route_with('/logout', methods=['GET'])
     def logout(self):
-        next_url = self.request.params.get('next_url', '/home/index')
+        destination = self.request.params.get('destination', '/home/index')
         get_auth().unset_session()
-        return self.redirect(next_url)
+        return self.redirect(destination)
         
     def _flash(self, message, mtype='info'):
         self.components.flash_messages(message, mtype)

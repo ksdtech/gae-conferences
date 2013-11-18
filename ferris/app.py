@@ -19,8 +19,9 @@ app = WSGIApplication(
 
 # Custom Error Handlers
 from ferris.controllers import errors
+from ferris.handlers import handle_403
 app.error_handlers[400] = errors.handle_400
 app.error_handlers[401] = errors.handle_401
-app.error_handlers[403] = errors.handle_403
+app.error_handlers[403] = handle_403
 app.error_handlers[404] = errors.handle_404
 app.error_handlers[500] = errors.handle_500

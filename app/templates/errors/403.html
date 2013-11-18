@@ -1,0 +1,7 @@
+{% extends "layouts/error.html" %}
+
+{% block title %}Access Denied{% endblock %}
+{% block subtitle %}Unauthorized request{% endblock %}
+{% block body %}
+<p><a href="{{ login_url }}">{{ login_name }}</a></p>
+{% endblock %}

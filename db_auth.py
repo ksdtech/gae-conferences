@@ -1,5 +1,6 @@
 from webapp2_extras.auth import get_auth
 from ferris.core.auth import predicate_chain, prefix_predicate, action_predicate, route_predicate
+import urllib
 
 def require_db_user(controller):
     """
@@ -15,5 +16,8 @@ def init_meta(controller):
     if db_user and db_user['user_id']:
         auth_key = controller.util.decode_key(db_user['user_id'])
         controller.db_user = auth_key.get()
+
+def create_login_url(dest_url=None):
+    return "/login?destination=%s" % urllib.quote(dest_url)
 
 require_db_user_for_action = predicate_chain(action_predicate, require_db_user)
