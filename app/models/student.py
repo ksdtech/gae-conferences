@@ -3,7 +3,7 @@ from google.appengine.ext import ndb
 from app.models.school import School
 from webapp2_extras.auth import InvalidAuthIdError, InvalidPasswordError
 from webapp2_extras.appengine.auth.models import Unique, UserToken
-from password_util import make_password, check_password
+from extras.password_util import make_password, check_password
 import logging
 import time
 import csv

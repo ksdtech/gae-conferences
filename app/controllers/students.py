@@ -1,11 +1,10 @@
-from ferris.core.controller import Controller, route
-from ferris.core import auth, scaffold
-from ferris.components import oauth
 from google.appengine.ext import blobstore
-from app.models.student import Student
+from ferris.components import oauth
+from ferris.core import auth, scaffold
+from ferris.core.controller import Controller, route
 from app.forms import CsvImportForm
-from decorator import decorator
-import db_auth
+from app.models.student import Student
+from extras import db_auth
 import logging
 
 
@@ -27,7 +26,7 @@ class Students(Controller):
 
     def _init_meta(self):
         super(Students, self)._init_meta()
-        db_auth.init_meta(self)
+        db_auth.add_db_user_meta(self)
 
     @route
     def appointments(self):

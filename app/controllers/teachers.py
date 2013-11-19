@@ -3,10 +3,10 @@ from google.appengine.ext import blobstore
 from ferris.components import oauth
 from ferris.core import auth, scaffold
 from ferris.core.controller import Controller, route
-from app.models.teacher import Teacher
 from app.forms import CsvImportForm
+from app.models.teacher import Teacher
 import logging
-# from apiclient.discovery import build
+
 
 class Teachers(Controller):
     class Meta:

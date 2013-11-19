@@ -8,9 +8,13 @@ import ferris.deferred_app
 import ferris.routes
 import app.routes
 import app.listeners
+from app.exception_handlers import handle_403
+
 from ferris.core import settings
 
 main_app = ferris.app.app  # Main application
+main_app.error_handlers[403] = handle_403
+
 deferred_app = ferris.deferred_app.app  # Deferred application
 
 appstats_settings = settings.get('appstats', {})

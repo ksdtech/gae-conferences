@@ -3,13 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/templates/errors/403.html</string>
+	<string>extras/time_util.py</string>
 	<key>documents</key>
 	<array>
 		<dict>
 			<key>children</key>
 			<array>
 				<dict>
+					<key>expanded</key>
+					<true/>
 					<key>name</key>
 					<string>app</string>
 					<key>regexFolderFilter</key>
@@ -21,7 +23,7 @@
 					<key>filename</key>
 					<string>app.yaml</string>
 					<key>lastUsed</key>
-					<date>2013-11-18T05:58:58Z</date>
+					<date>2013-11-19T00:00:00Z</date>
 				</dict>
 				<dict>
 					<key>filename</key>
@@ -36,6 +38,8 @@
 					<date>2013-11-17T04:45:22Z</date>
 				</dict>
 				<dict>
+					<key>expanded</key>
+					<true/>
 					<key>name</key>
 					<string>ferris</string>
 					<key>regexFolderFilter</key>
@@ -46,24 +50,26 @@
 				<dict>
 					<key>filename</key>
 					<string>fix_imports.py</string>
+					<key>lastUsed</key>
+					<date>2013-11-18T23:59:57Z</date>
 				</dict>
 				<dict>
 					<key>filename</key>
 					<string>main.py</string>
 					<key>lastUsed</key>
-					<date>2013-11-18T17:52:07Z</date>
+					<date>2013-11-18T23:57:09Z</date>
 				</dict>
 				<dict>
 					<key>filename</key>
 					<string>db_auth.py</string>
 					<key>lastUsed</key>
-					<date>2013-11-18T18:24:02Z</date>
+					<date>2013-11-18T23:59:56Z</date>
 				</dict>
 				<dict>
 					<key>filename</key>
 					<string>password_util.py</string>
 					<key>lastUsed</key>
-					<date>2013-11-17T20:40:34Z</date>
+					<date>2013-11-18T23:57:14Z</date>
 				</dict>
 				<dict>
 					<key>name</key>
@@ -76,6 +82,8 @@
 				<dict>
 					<key>filename</key>
 					<string>queue.yaml</string>
+					<key>lastUsed</key>
+					<date>2013-11-18T23:59:42Z</date>
 				</dict>
 				<dict>
 					<key>filename</key>
@@ -95,7 +103,7 @@
 					<key>filename</key>
 					<string>settings.py</string>
 					<key>lastUsed</key>
-					<date>2013-11-18T06:24:07Z</date>
+					<date>2013-11-18T23:43:35Z</date>
 				</dict>
 				<dict>
 					<key>filename</key>
@@ -134,7 +142,19 @@
 					<key>name</key>
 					<string>packages</string>
 				</dict>
+				<dict>
+					<key>expanded</key>
+					<true/>
+					<key>name</key>
+					<string>extras</string>
+					<key>regexFolderFilter</key>
+					<string>!.*/(\.[^/]*|CVS|_darcs|_MTN|\{arch\}|blib|.*~\.nib|.*\.(framework|app|pbproj|pbxproj|xcode(proj)?|bundle))$</string>
+					<key>sourceDirectory</key>
+					<string>extras</string>
+				</dict>
 			</array>
+			<key>expanded</key>
+			<true/>
 			<key>name</key>
 			<string>source</string>
 		</dict>
@@ -143,84 +163,42 @@
 	<integer>307</integer>
 	<key>metaData</key>
 	<dict>
-		<key>app/controllers/sessions.py</key>
+		<key>app/listeners.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>37</integer>
-				<key>line</key>
 				<integer>33</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>16</integer>
-		</dict>
-		<key>app/templates/errors/403.html</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>23</integer>
 				<key>line</key>
-				<integer>3</integer>
+				<integer>14</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>db_auth.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>16</integer>
-				<key>line</key>
-				<integer>25</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>ferris/handlers.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>65</integer>
-				<key>line</key>
-				<integer>21</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>ferris/templates/errors/401.html</key>
+		<key>extras/time_util.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
 				<integer>0</integer>
 				<key>line</key>
-				<integer>0</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>ferris/templates/layouts/error.html</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
 				<integer>7</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>ferris/app.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>24</integer>
 				<key>line</key>
-				<integer>29</integer>
+				<integer>23</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
@@ -231,31 +209,88 @@
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>3</integer>
 				<key>line</key>
-				<integer>0</integer>
+				<integer>23</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>7</integer>
+				<integer>24</integer>
 				<key>line</key>
-				<integer>29</integer>
+				<integer>23</integer>
 			</dict>
+		</dict>
+		<key>ferris/core/time_util.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>18</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>fix_imports.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>0</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>main.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>41</integer>
+				<key>line</key>
+				<integer>15</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>password_util.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>17</integer>
+				<key>line</key>
+				<integer>0</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>app/controllers/sessions.py</string>
-		<string>ferris/handlers.py</string>
-		<string>app/templates/errors/403.html</string>
-		<string>ferris/templates/layouts/error.html</string>
-		<string>ferris/templates/errors/401.html</string>
-		<string>db_auth.py</string>
+		<string>ferris/app.py</string>
+		<string>app/listeners.py</string>
+		<string>main.py</string>
+		<string>password_util.py</string>
+		<string>ferris/core/time_util.py</string>
+		<string>extras/time_util.py</string>
+		<string>fix_imports.py</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{410, 98}, {954, 629}}</string>
+	<string>{{326, 37}, {954, 629}}</string>
 </dict>
 </plist>

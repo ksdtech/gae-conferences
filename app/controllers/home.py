@@ -1,13 +1,13 @@
 from ferris.core.controller import Controller, route
 from google.appengine.api import users
-import db_auth
+from extras import db_auth
 import logging
 
 class Home(Controller):
 
     def _init_meta(self):
         super(Home, self)._init_meta()
-        db_auth.init_meta(self)
+        db_auth.add_db_user_meta(self)
 
     @route
     def index(self):

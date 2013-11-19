@@ -3,9 +3,15 @@
 # otherwise set up login_url to appengine Users service
 
 from ferris.core.template import render_template
-import db_auth
+from extras import db_auth
 import json
 import logging
+
+def create_login_for(request):
+    if request.path.startswith('/students'):
+        return (db_auth.create_login_url(request.url), 'Parent log in')
+    else:
+        return (users.create_login_url(request.url), 'Teacher log in')
 
 def handle_403(request, response, exception):
     logging.exception(exception)
@@ -19,7 +25,7 @@ def handle_403(request, response, exception):
 
     else:
         template = ('errors/403.html', 'errors/500.html')
-        login_url, login_name = db_auth.create_login_for(request)
+        login_url, login_name = create_login_for(request)
         context = { 'request': request, 'exception': exception, 'login_url': login_url, 'login_name': login_name }
         response.content_type = 'text/html'
         response.text = render_template(template, context)

@@ -1,11 +1,11 @@
-from ferris.core.controller import Controller, route
-from ferris.core import scaffold
-from ferris.components import oauth
 from google.appengine.ext import blobstore
-from app.models.school import School
+from ferris.components import oauth
+from ferris.core import scaffold
+from ferris.core.controller import Controller, route
 from app.forms import CsvImportForm
+from app.models.school import School
 import logging
-# from apiclient.discovery import build
+
 
 class Schools(Controller):
     class Meta:

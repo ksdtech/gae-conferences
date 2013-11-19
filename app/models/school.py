@@ -1,6 +1,6 @@
-from ferris.core.ndb import BasicModel
-from ferris.core.time_util import parse_in_local_tz
 from google.appengine.ext import ndb
+from ferris.core.ndb import BasicModel
+from extras.time_util import parse_in_local_tz
 import logging
 import csv
 
