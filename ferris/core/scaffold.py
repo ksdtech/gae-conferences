@@ -130,7 +130,7 @@ def delegate_query_factory(controller):
     return default_query_factory(controller)
 
 
-def delete_create_factory(controller):
+def delegate_create_factory(controller):
     """
     Calls Model.Meta.create_factory or Model.create or the Model constructor.
     """
@@ -138,7 +138,7 @@ def delete_create_factory(controller):
         return Model.Meta.create_factory(controller)
     if hasattr(Model, 'create'):
         return Model.create(controller)
-    return delete_create_factory(controller)
+    return default_create_factory(controller)
 
 
 # Utility Functions
