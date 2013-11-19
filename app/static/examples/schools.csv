@@ -1,3 +1,3 @@
-name,sis_id,parent_access_start_time,parent_access_end_time
-Bacich Elementary School,103,2013-10-11 12:00:00,2013-10-18 12:00:00
-Kent Middle School,104,2013-10-11 12:00:00,2013-10-18 12:00:00
+name,sis_id,parent_start_date,parent_start_time,parent_end_date,parent_end_time
+Bacich Elementary School,103,2013-10-11,12:00,2013-10-18,12:00
+Kent Middle School,104,2013-10-11,12:00,2013-10-18,12:00

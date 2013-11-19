@@ -1,7 +1,7 @@
 from ferris.core.controller import Controller, route
 from google.appengine.api import users
 from extras import db_auth
-import logging
+
 
 class Home(Controller):
 

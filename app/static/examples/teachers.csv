@@ -1,5 +1,5 @@
 school_id,sis_id,first_name,last_name,location,email,admin
-103,2033,Elizabeth,Lombardi,Room 4,elombardi@kentfieldschools.org,0
-103,1206,Sally,Principal,School Office,sprincipal@kentfieldschools.org,1
-104,1528,Myrtle,Peterson,Room 23,mpeterson@kentfieldschools.org,0
-104,566,Skip,Administrator,School Office,sadministrator@kentfieldschools.org,1
+103,103180,Elizabeth,Lombardi,Room 4,elombardi@kentfieldschools.org,0
+103,103181,Sally,Principal,School Office,sprincipal@kentfieldschools.org,1
+104,104201,Myrtle,Peterson,Room 23,mpeterson@kentfieldschools.org,0
+104,104202,Skip,Administrator,School Office,sadministrator@kentfieldschools.org,1

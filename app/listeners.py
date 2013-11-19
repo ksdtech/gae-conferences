@@ -2,7 +2,6 @@
 Central place to store event listeners for your application,
 automatically imported at run time.
 """
-import logging
 from ferris.core import events, settings
 
 def require_auth_domain(controller):

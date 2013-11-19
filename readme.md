@@ -9,6 +9,19 @@ Ferris code cloned from develop branch on Bitbucket:
     From: Jon Wayne Parrott <jjramone13@gmail.com>
     Date: Wed, 13 Nov 2013 13:49:40 -0500
     Subject: [PATCH] decode_key now checks if the parameter is already a key
+    
+    
+Using This App With PowerSchool
+-------------------------------
+
+For enrollments, use DDE on CC records and select these fields:
+
+SchoolID
+[01]Student_Number
+[05]TeacherNumber
+Course_Number
+SectionID
+[03]Expression
 
 
 TODO
@@ -51,6 +64,7 @@ Use git to export ferris to your project directory (trailing slash is important!
     git checkout-index -a -f --prefix=/project-directory/
 
 You're ready to go, just open your project directory and  run the app engine server.
+
 
 License
 -------

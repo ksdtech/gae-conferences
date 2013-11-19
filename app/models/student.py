@@ -4,9 +4,9 @@ from webapp2_extras.auth import InvalidAuthIdError, InvalidPasswordError
 from webapp2_extras.appengine.auth.models import Unique, UserToken
 from app.models.school import School
 from extras.password_util import make_password, check_password
-import logging
-import time
 import csv
+import time
+import logging
 
 
 # Heavily lifted from webapp2_extras.appengine.auth.models.User
@@ -162,14 +162,15 @@ class Student(BasicModel):
         return None, None
      
     @classmethod
-    def import_csv(cls, reader):
+    def csv_import(cls, reader):
         for row in csv.DictReader(reader):
-            school_key = School.key_for_sis_id(row['school_id'])
-            student = cls.find_by_sis_id(row['sis_id'])
             crypted_password = make_password(row['password'])
+            
+            school = School.key_for_sis_id(row['school_id'])
+            teacher = cls.query(cls.sis_id == row['sis_id'], ancestor=school).get()
             if student is None:
                 student = cls(
-                    parent=school_key,
+                    parent=school,
                     first_name=row['first_name'],
                     last_name=row['last_name'],
                     sis_id=row['sis_id'],
