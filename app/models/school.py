@@ -4,6 +4,7 @@ from extras.time_util import parse_in_local_tz
 import logging
 import csv
 
+
 class School(BasicModel):
     name = ndb.StringProperty()
     sis_id = ndb.StringProperty()

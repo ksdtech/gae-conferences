@@ -1,0 +1,25 @@
+{% import 'scaffolding/macros.html' as s with context %}
+{% import 'macros/form.html' as f with context %}
+{% extends s.layout() %}
+
+{% block layout_content %}
+<h2>Import Schedule Data</h2>
+<p>Download a <a href="/static/examples/schedules.csv">sample CSV file</a> and 
+  edit it. Then select and import it here:</p>
+
+<form method="POST" action="{{upload_url}}" class="form" enctype="multipart/form-data">
+  <fieldset>
+    {% block form_fields %}
+        {% for field in form %}
+            {{ f.form_field(form, field) }}
+        {% endfor %}
+    {% endblock %}
+    <div class='controls form-actions'>
+      <div class="btn-group">
+        <button class='btn btn-primary btn-large' type='submit'>Import</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+
+{% endblock %}

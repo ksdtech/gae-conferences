@@ -1,4 +1,6 @@
 *.pyc
 ds
+packages
+settings.py
 *.coverage
 *~

@@ -1,8 +1,9 @@
-from ferris.core.ndb import BasicModel
 from google.appengine.ext import ndb
+from ferris.core.ndb import BasicModel
 from app.models.school import School
 import logging
 import csv
+
 
 # parent = School
 class Teacher(BasicModel):

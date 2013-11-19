@@ -1,12 +1,13 @@
-from ferris.core.ndb import util, BasicModel
 from google.appengine.ext import ndb
-from app.models.school import School
+from ferris.core.ndb import util, BasicModel
 from webapp2_extras.auth import InvalidAuthIdError, InvalidPasswordError
 from webapp2_extras.appengine.auth.models import Unique, UserToken
+from app.models.school import School
 from extras.password_util import make_password, check_password
 import logging
 import time
 import csv
+
 
 # Heavily lifted from webapp2_extras.appengine.auth.models.User
 # Parent = School
