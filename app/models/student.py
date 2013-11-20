@@ -167,7 +167,7 @@ class Student(BasicModel):
             crypted_password = make_password(row['password'])
             
             school = School.key_for_sis_id(row['school_id'])
-            teacher = cls.query(cls.sis_id == row['sis_id'], ancestor=school).get()
+            student = cls.query(cls.sis_id == row['sis_id'], ancestor=school).get()
             if student is None:
                 student = cls(
                     parent=school,

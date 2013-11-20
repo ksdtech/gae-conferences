@@ -1,6 +1,7 @@
 from google.appengine.ext import ndb
 from ferris.core.ndb import BasicModel
 from app.models.school import School
+from app.helpers import bool_from_string
 import csv
 import logging
 
@@ -31,7 +32,7 @@ class Teacher(BasicModel):
                     sis_id=row['sis_id'],
                     location=row['location'],
                     email=row['email'],
-                    is_admin=bool(int(row['admin']))
+                    is_admin=bool_from_string(row['admin'])
                 )
                 teacher.put()
                 logging.info("inserted teacher: %s" % row)

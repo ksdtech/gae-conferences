@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>app/models/schedule.py</string>
+	<string>app/models/appointment.py</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -73,7 +73,7 @@
 					<key>filename</key>
 					<string>readme.md</string>
 					<key>lastUsed</key>
-					<date>2013-11-17T09:34:12Z</date>
+					<date>2013-11-19T19:31:01Z</date>
 				</dict>
 				<dict>
 					<key>name</key>
@@ -140,183 +140,107 @@
 		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
-	<integer>307</integer>
+	<integer>184</integer>
 	<key>metaData</key>
 	<dict>
-		<key>app/models/schedule.py</key>
+		<key>app/models/appointment.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>41</integer>
+				<integer>76</integer>
 				<key>line</key>
-				<integer>66</integer>
+				<integer>23</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>25</integer>
+			<integer>5</integer>
 		</dict>
-		<key>app/static/examples/schedules.csv</key>
+		<key>app/models/enrollment.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>60</integer>
 				<key>line</key>
-				<integer>11</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>app/templates/schedules/nav.html</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>6</integer>
+				<integer>20</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
-		<key>ferris/core/forms/fields.py</key>
+		<key>app/models/student.py</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>26</integer>
+				<integer>70</integer>
 				<key>line</key>
-				<integer>199</integer>
+				<integer>169</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
+		<key>app/models/teacher.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>19</integer>
+				<key>line</key>
+				<integer>24</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>7</integer>
+		</dict>
+		<key>ferris/core/ndb/model.py</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>31</integer>
+				<key>line</key>
+				<integer>62</integer>
 			</dict>
 			<key>columnSelection</key>
 			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>182</integer>
+			<integer>47</integer>
 			<key>selectFrom</key>
 			<dict>
 				<key>column</key>
-				<integer>18</integer>
+				<integer>8</integer>
 				<key>line</key>
-				<integer>199</integer>
+				<integer>62</integer>
 			</dict>
 			<key>selectTo</key>
 			<dict>
 				<key>column</key>
-				<integer>26</integer>
+				<integer>31</integer>
 				<key>line</key>
-				<integer>199</integer>
+				<integer>62</integer>
 			</dict>
-		</dict>
-		<key>ferris/core/forms/monkey.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>15</integer>
-				<key>line</key>
-				<integer>14</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>2</integer>
-		</dict>
-		<key>ferris/core/ndb/behavior.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>9</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-		<key>ferris/core/oauth2/user_credentials.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>30</integer>
-			</dict>
-			<key>columnSelection</key>
-			<false/>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>10</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>27</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>0</integer>
-				<key>line</key>
-				<integer>30</integer>
-			</dict>
-		</dict>
-		<key>ferris/core/request_parsers.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>15</integer>
-				<key>line</key>
-				<integer>41</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>86</integer>
-		</dict>
-		<key>packages/ndb/model.py</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>26</integer>
-				<key>line</key>
-				<integer>2454</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>206</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
-		<string>app/models/schedule.py</string>
-		<string>app/templates/schedules/nav.html</string>
-		<string>app/static/examples/schedules.csv</string>
-		<string>ferris/core/request_parsers.py</string>
-		<string>packages/ndb/model.py</string>
-		<string>ferris/core/forms/fields.py</string>
-		<string>ferris/core/ndb/behavior.py</string>
-		<string>ferris/core/oauth2/user_credentials.py</string>
-		<string>ferris/core/forms/monkey.py</string>
+		<string>ferris/core/ndb/model.py</string>
+		<string>app/models/student.py</string>
+		<string>app/models/enrollment.py</string>
+		<string>app/models/appointment.py</string>
+		<string>app/models/teacher.py</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{310, 30}, {954, 629}}</string>
+	<string>{{222, 149}, {954, 629}}</string>
 </dict>
 </plist>
