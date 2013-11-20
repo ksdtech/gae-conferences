@@ -1,0 +1,9 @@
+student_id,teacher_id,date,start_time,duration,location,teacher_name,active
+113957,103181,2013-12-02,12:30,20,Room 3,Mrs. Principal,yes
+,103181,2013-12-02,13:00,20,Room 3,Mrs. Principal,no
+114022,103181,2013-12-02,13:30,20,Room 3,Mrs. Principal,yes
+,103181,2013-12-02,14:00,20,Room 3,Mrs. Principal,yes
+113800,103180,2013-12-02,12:30,20,Room 2,Mrs. Lombardi,yes
+,103180,2013-12-02,13:00,20,Room 2,Mrs. Lombardi,no
+113822,103180,2013-12-02,13:30,20,Room 2,Mrs. Lombardi,yes
+,103180,2013-12-02,14:00,20,Room 2,Mrs. Lombardi,yes
