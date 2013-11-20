@@ -1,0 +1,24 @@
+{% import 'scaffolding/macros.html' as s with context %}
+{% extends s.layout() %}
+
+{% block layout_content %}
+
+<table class='table table-striped'>
+    <thead>
+        <tr>
+            <th>Start time</th>
+            <th>Is active</th>
+            <th>Student</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in context['appointments'] %}
+        <tr>
+            <td>{{s.print_value(item['start_time'])}}</td>
+            <td>{{s.print_value(item['is_active'])}}</td>
+            <td>{{s.print_value(item['student_id'])}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

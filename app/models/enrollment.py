@@ -24,11 +24,11 @@ class Enrollment(BasicModel):
             school = School.key_for_sis_id(row['school_id'])
             student_id = row['student_id']
             if Student.query(Student.sis_id == student_id).count() == 0:
-                logging.info("no such student %s" % student_id)
+                logging.warn("no such student %s" % student_id)
                 continue
             teacher_id = row['teacher_id']
             if Teacher.query(Teacher.sis_id == teacher_id).count() == 0:
-                logging.info("no such teacher %s" % teacher_id)
+                logging.warn("no such teacher %s" % teacher_id)
                 continue
             enrollment = cls(
                 parent=school,

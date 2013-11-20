@@ -1,8 +1,10 @@
 from ferris.components import oauth
 from ferris.core import auth, scaffold
-from ferris.core.controller import Controller, route
+from ferris.core.controller import Controller, route, route_with
 from app.helpers import csv_import
 from app.models.teacher import Teacher
+from app.models.appointment import Appointment
+import logging
 
 
 class Teachers(Controller):
@@ -29,3 +31,13 @@ class Teachers(Controller):
     @route
     def admin_import(self):
         return csv_import(self)
+        
+    @route_with('/admin/teachers/:<key>/appointments')
+    def admin_appointments(self, key):
+        item = self.util.decode_key(key).get()
+        if not item:
+            return 404
+        appointments = Appointment.query(ancestor=item.key)
+        logging.info("appointments count %d" % appointments.count())
+        self.context.set(**{ 'teacher': item, 'appointments': appointments })
+
